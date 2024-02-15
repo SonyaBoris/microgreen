@@ -1,3 +1,31 @@
 .header{
-  border: 1px solid #000;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80vw; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.navigation{
+  display: flex;
+  gap: 3vw;
+}
+.cart{
+  position: relative;
+}
+.counter{
+  position: absolute;
+  padding-left: 4px;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  bottom: 5px;
+  background-color: #F6F9EF;
+  border: 2px solid #476042;
+  color: #476042;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 100%;
+
 }

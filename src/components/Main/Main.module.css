@@ -1,0 +1,45 @@
+.main{
+  position: relative;
+}
+
+.title{
+  font-size: 200px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #476042;
+  line-height: 80%;
+}
+.desc{
+  font-size: 120px;
+  color: #476042;
+  text-transform: uppercase;
+}
+.text{
+  width: 500px;
+}
+.button{
+  padding: 15px 30px;
+  border-radius: 15px;
+}
+.lists{
+  position: absolute;
+  top: -150px;
+  right: 210px;
+  width: 500px;
+  z-index: 1;
+}
+.miska{
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 500px;
+  transform: rotate(-30deg);
+  z-index: 0;
+}
+.circle{
+  position: absolute;
+  top: 140px;
+  left: 645px;
+}
