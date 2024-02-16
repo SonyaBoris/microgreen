@@ -5,6 +5,7 @@ import s from "./Main.module.css"
 import MISKA from "../../assets/миска2.png"
 import LISTS from "../../assets/листики.png"
 import CIRCLE from "../../assets/circle.png"
+import { Link } from "react-router-dom"
 
 
 const Main = () => {
@@ -50,7 +51,7 @@ const Main = () => {
         >зелень</motion.h2>
         <motion.img className={s.lists} src={LISTS} alt=""
           initial={{
-            x: 500,
+            x: 200,
             opacity: 0,
             rotate: 20,
           }}
@@ -66,7 +67,7 @@ const Main = () => {
         />
         <motion.img className={s.miska} src={MISKA} alt=""
           initial={{
-            x: 400,
+            x: 200,
             opacity: 0,
             rotate: 20,
           }}
@@ -90,10 +91,10 @@ const Main = () => {
           transition={{
             delay: 1.5,
           }}
-        >Текст о пользе Текст о пользе Текст о пользе Текст о пользе
-          Текст о пользе Текст о пользе Текст о пользе Текст о пользе
-          Текст о пользе Текст о пользе Текст о пользе Текст о пользе</motion.p>
-        <button className={s.button}>Купить</button>
+        >Маленькое ростки с огромной пользой. Сделайте каждый прием пищи богатым на витамины и микроэлементы</motion.p>
+        <Link to="/about">
+          <button>Купить</button>
+        </Link>
         <motion.img className={s.circle} src={CIRCLE} alt=""
           initial={{
 

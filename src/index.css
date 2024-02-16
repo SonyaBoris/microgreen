@@ -8,12 +8,36 @@
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   list-style: none;
+  color:#476042;
 }
+
 body{
   background-color: #F6F9EF;
 }
+button{
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: 2px solid #476042;
+  background-color: #476042;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+h2{
+  font-size: 30px;
+  font-weight: 100;
+}
 .container{
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 20px;
   width: 80vw; 
+}
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.active{
+  border: 2px solid #476042; 
 }

@@ -18,22 +18,23 @@
 }
 .text{
   width: 500px;
+  color: #476042;
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
 }
-.button{
-  padding: 15px 30px;
-  border-radius: 15px;
-}
+
 .lists{
   position: absolute;
   top: -150px;
-  right: 210px;
+  right: 390px;
   width: 500px;
   z-index: 1;
 }
 .miska{
   position: absolute;
   top: 0;
-  right: 100px;
+  right: 270px;
   width: 500px;
   transform: rotate(-30deg);
   z-index: 0;
