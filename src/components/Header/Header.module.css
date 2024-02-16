@@ -8,20 +8,24 @@
   gap: 3vw;
 }
 .item{
-  padding: 10px 15px; 
-  border: 1px solid #fff;
+  padding: 10px 20px; 
   border-radius: 30px;
+  box-shadow: -5px -5px 10px 0 #fff, 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+ 
 }
 .cart{
   position: relative;
+  padding: 15px;
+  border-radius: 100%;
+  box-shadow: -5px -5px 10px 0 #fff, 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 .counter{
   position: absolute;
   padding-left: 4px;
   width: 20px;
   height: 20px;
-  right: 5px;
-  bottom: 5px;
+  right: 15px;
+  bottom: 15px;
   background-color: #F6F9EF;
   border: 2px solid #476042;
   color: #476042;
