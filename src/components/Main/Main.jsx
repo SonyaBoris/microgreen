@@ -31,13 +31,14 @@ const Main = () => {
   }
 
   return (
-    <section className={s.main}>
-      <div className="container">
+    <div className="container">
+      <section className={s.main}>
+
         <motion.h1 className={s.title}
           initial={"hidden"}
           animate={"visible"}
           transition={{
-            delay: .4,
+            delay: .8,
           }}
           variants={h1Variants}
         >микро</motion.h1>
@@ -45,18 +46,18 @@ const Main = () => {
           initial={"hidden"}
           animate={"visible"}
           transition={{
-            delay: .4,
+            delay: 1,
           }}
           variants={h2Variants}
         >зелень</motion.h2>
         <motion.img className={s.lists} src={LISTS} alt=""
           initial={{
-            x: 200,
+            y: 200,
             opacity: 0,
             rotate: 20,
           }}
           animate={{
-            x: 0,
+            y: 0,
             opacity: 1,
             rotate: -20,
           }}
@@ -67,12 +68,12 @@ const Main = () => {
         />
         <motion.img className={s.miska} src={MISKA} alt=""
           initial={{
-            x: 200,
+            y: 200,
             opacity: 0,
             rotate: 20,
           }}
           animate={{
-            x: 0,
+            y: 0,
             opacity: 1,
             rotate: -20,
           }}
@@ -93,23 +94,40 @@ const Main = () => {
           }}
         >Маленькое ростки с огромной пользой. Сделайте каждый прием пищи богатым на витамины и микроэлементы</motion.p>
         <Link to="/about">
-          <button>Купить</button>
+          <motion.button
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1.8,
+            }}>Купить</motion.button>
         </Link>
-        <motion.img className={s.circle} src={CIRCLE} alt=""
+        <motion.div
           initial={{
-
+            opacity: 0,
           }}
-          animate={{
-            rotate: -360,
+          animate={{   
+            opacity: 1,
           }}
           transition={{
-            ease: 'linear',
-            duration: 4,
-            repeat: Infinity,
-          }} />
-      </div >
-    </section>
+          delay: .5,
 
+          }}>
+          <motion.img className={s.circle} src={CIRCLE} alt=""
+            animate={{
+              rotate: -360,
+            }}
+            transition={{
+              ease: 'linear',
+              duration: 4,
+              repeat: Infinity,
+            }} />
+        </motion.div>
+      </section>
+    </div >
 
   );
 }

@@ -4,8 +4,10 @@
   align-items: center;
 }
 .text{ 
+  height: 60vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  justify-content: center;
   gap: 40px;
   text-align: center;
   width: 400px;
@@ -13,5 +15,13 @@
 }
 
 .image{
+  position: absolute;
   width: 30vw;
+  z-index: 2;
+}
+.image2{
+  position: absolute;
+  width: 30vw;
+  right: 0;
+  z-index: 2;
 }

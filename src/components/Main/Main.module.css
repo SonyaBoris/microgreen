@@ -1,5 +1,9 @@
 .main{
   position: relative;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title{
@@ -8,17 +12,16 @@
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: #476042;
+  -webkit-text-stroke-color: #fff;
   line-height: 80%;
 }
 .desc{
   font-size: 120px;
-  color: #476042;
+  font-weight: 900;
   text-transform: uppercase;
 }
 .text{
   width: 500px;
-  color: #476042;
   margin: 20px 0;
   font-size: 18px;
   font-weight: 500;
@@ -27,14 +30,14 @@
 .lists{
   position: absolute;
   top: -150px;
-  right: 390px;
+  right: 80px;
   width: 500px;
   z-index: 1;
 }
 .miska{
   position: absolute;
   top: 0;
-  right: 270px;
+  right: 0;
   width: 500px;
   transform: rotate(-30deg);
   z-index: 0;
