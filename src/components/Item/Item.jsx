@@ -1,14 +1,13 @@
 import s from "./Item.module.css"
 
-import GOROH from "../../assets/goroh.png"
 
-const Item = () => {
+const Item = ({ name, image,onSelectItem ,id}) => {
   return (
-    <div className={s.item}>     
-      <img className={s.image} src={GOROH} />
-      <h4>Горох</h4>
+    <div className={s.item}>
+      <img className={s.image} src={image} />
+      <h4>{name}</h4>
       <p>150 p</p>
-      <button className={s.btn}>Подробнее</button>
+      <button className={s.btn} onClick={()=>onSelectItem(id)}>Подробнее</button>
       <button>Добавить в корзину</button>
     </div>
   );
