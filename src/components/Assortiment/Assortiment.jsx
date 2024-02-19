@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Item from "../Item/Item";
 import s from "./Assortiment.module.css"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import {addItemToCart} from "../../redux/greenSlice"
+import AssortimentActive from "./AssortimentActive";
+
 
 const green = [
   {
@@ -44,38 +45,19 @@ const green = [
 ]
 
 const Assortiment = () => {
-  const [activeItem, setActiveItem] = useState(0)
-  const onSelectItem = (index) => {
-    setActiveItem(index)
-  }
-  console.log(activeItem)
-  const selectItem = green[activeItem]
+  const actInd = useSelector((state) => state.counter.activeIndex)
 
-  const addToCart = () =>{
-    dispatch(addItemToCart(green))
-  }
+  const selectItem = green[actInd] 
 
-  const dispatch = useDispatch()
-  
+
   return (
     <section>
       <div className="container">
-        <div className={s.about}>
-          <img src={selectItem.image} width={500} />
-          <div className={s.info}>
-            <h2>{selectItem.name}</h2>
-            <p>{selectItem.info}</p>
-            <div className={s.price}>
-              <p>Стоимость: </p>
-              {selectItem.price} p
-            </div>
-            <button onClick={addToCart}>Добавить в корзину</button>
-          </div>
-
-        </div>
+        <AssortimentActive name={selectItem.name} image={selectItem.image} id={selectItem.id} price={selectItem.price} info={selectItem.info}/>
+       
         <div className={s.assortiment}>
           {green.map((obj) => (
-            <Item key={obj.id} name={obj.name} image={obj.image} id={obj.id} onSelectItem={onSelectItem}  />
+            <Item key={obj.id} name={obj.name} image={obj.image} id={obj.id} price={obj.price}/>
           ))}
         </div>
 

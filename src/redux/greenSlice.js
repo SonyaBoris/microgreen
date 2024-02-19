@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
+  activeIndex: 0,
   value: 0,
   cart: [],
 }
@@ -12,17 +13,28 @@ export const counterSlice = createSlice({
     increment: (state) => {
       state.value += 1
     },
-    addItemToCart: (state) => {
-      state.value += 1
+    activeItem: (state, action) => {
+      state.activeIndex = action.payload.id
     },
-    removeItemFromCart: (state, { payload }) => {
-      state.cart = state.cart.filter(({ id }) => id !== payload)
+    addItemToCart: (state, action) => {
+      
+      state.cart.push({
+        id: action.payload.id,
+        name:   action.payload.name,
+        image: action.payload.image,
+        price: action.payload.price,
+      })
+      state.value = state.cart.length
+    },
+    removeItemFromCart: (state, action) => {
+      state.cart = state.cart.filter(cart => cart.id !== action.payload.id)
+      state.value = state.cart.length
     },
 
   },
 })
 
 
-export const { increment, addItemToCart,removeItemFromCart } = counterSlice.actions
+export const { activeItem, increment, addItemToCart, removeItemFromCart } = counterSlice.actions
 
 export default counterSlice.reducer
