@@ -14,7 +14,14 @@
   flex-direction: column;
   gap: 20px;
 }
-.price{
+.text{
   display: flex;
   gap: 15px;
+}
+.properties{
+  width: 100px;
+  font-weight: 500;
+}
+.description{
+  width: 70%;
 }

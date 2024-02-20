@@ -3,7 +3,7 @@ import { addItemToCart } from "../../redux/greenSlice"
 
 import s from "./Assortiment.module.css"
 
-const AssortimentActive = ({ image, info, price, id ,name}) => {
+const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins }) => {
 
   console.log(name)
   const dispatch = useDispatch()
@@ -12,12 +12,23 @@ const AssortimentActive = ({ image, info, price, id ,name}) => {
       <img src={image} width={500} />
       <div className={s.info}>
         <h2>{name}</h2>
-        <p>{info}</p>
-        <div className={s.price}>
-          <p>Стоимость: </p>
-          {price} p
+        <div className={s.text}>
+          <p className={s.properties}>Вкус:</p>
+          <p className={s.description}>{info}</p>
         </div>
-        <button onClick={() => dispatch(addItemToCart({id,name,image, price}))}>Добавить в корзину</button>
+        <div className={s.text}>
+          <p className={s.properties}>Содержит:</p>
+          <p className={s.description}>{vitamins}</p>
+        </div>
+        <div className={s.text}>
+          <p className={s.properties}>Польза:</p>
+          <p className={s.description}>{benefit}</p>
+        </div>
+        <div className={s.text}>
+          <p className={s.properties}>Стоимость: </p>
+          <p className={s.description}>{price} p</p>
+        </div>
+        <button onClick={() => dispatch(addItemToCart({ id, name, image, price }))}>Добавить в корзину</button>
       </div>
 
     </div>

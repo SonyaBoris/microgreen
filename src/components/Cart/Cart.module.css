@@ -11,10 +11,12 @@
   height: 60vh;
 }
 .items{
+  padding-right: 10px;
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow-y: auto;
 }
 .item{
   display: flex;
