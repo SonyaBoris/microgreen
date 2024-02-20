@@ -1,5 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../redux/greenSlice"
+
 import s from "./Assortiment.module.css"
 
 const AssortimentActive = ({ image, info, price, id ,name}) => {

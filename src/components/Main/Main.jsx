@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
 import s from "./Main.module.css"
@@ -5,8 +6,6 @@ import s from "./Main.module.css"
 import MISKA from "../../assets/миска2.png"
 import LISTS from "../../assets/листики.png"
 import CIRCLE from "../../assets/circle.png"
-import { Link } from "react-router-dom"
-
 
 const Main = () => {
   const h1Variants = {
