@@ -7,18 +7,19 @@ import {CartItem} from "../index";
 
 const Cart = () => {
   const cart = useSelector((state) => state.counter.cart)
+ 
 
   return (
     <section>
       <div className="container">
         {!cart.length ? (
-          <div className={s.empty}>Here is empty</div>
+          <div className={s.empty}>Корзина пустая</div>
         ) : (
 
           <div className={s.cart}>
             <div className={s.items}>
               {cart.map(obj => (
-                <CartItem key={obj.id} name={obj.name} image={obj.image} price={obj.price} id={obj.id} />
+                <CartItem key={obj.id} {...obj} />
               ))}
               <div className={s.price}>
                 <p>Итого:</p>

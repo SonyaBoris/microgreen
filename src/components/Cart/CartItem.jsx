@@ -1,9 +1,10 @@
 import s from "./Cart.module.css"
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {removeItemFromCart} from "../../redux/greenSlice"
 
 const CartItem = ({name, image,price,id}) => {
+  const quantity = useSelector((state) => state.counter.quantity)
   const dispatch = useDispatch()
   return (
     <div className={s.item}>
@@ -12,7 +13,7 @@ const CartItem = ({name, image,price,id}) => {
         <h4>{name}</h4>
         <div className={s.quantity}>
           <div className={s.icon}>-</div>
-          <p>1</p>
+          <p>{quantity}</p>
           <div className={s.icon}>+</div>
         </div>
         <div> {price} p</div>

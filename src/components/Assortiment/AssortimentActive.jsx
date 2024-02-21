@@ -5,8 +5,8 @@ import s from "./Assortiment.module.css"
 
 const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins }) => {
 
-  console.log(name)
   const dispatch = useDispatch()
+  
   return (
     <div className={s.about}>
       <img src={image} width={500} />

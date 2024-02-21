@@ -85,19 +85,16 @@ const Assortiment = () => {
 
   const selectItem = green[actInd]
 
-
   return (
     <section>
       <div className="container">
-        <AssortimentActive name={selectItem.name} image={selectItem.image} id={selectItem.id} price={selectItem.price} info={selectItem.info} vitamins={selectItem.vitamins} benefit={selectItem.benefit}/>
+        <AssortimentActive {...selectItem}/>
 
         <div className={s.assortiment}>
           {green.map((obj) => (
-            <Item key={obj.id} name={obj.name} image={obj.image} id={obj.id} price={obj.price} />
+            <Item key={obj.id} {...obj} />
           ))}
         </div>
-
-
       </div>
     </section>
   );
