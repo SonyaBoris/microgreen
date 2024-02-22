@@ -4,7 +4,6 @@ import s from "./Assortiment.module.css"
 
 import { Item, AssortimentActive } from "../index";
 
-
 const green = [
   {
     "id": 0,

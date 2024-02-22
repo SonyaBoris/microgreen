@@ -2,12 +2,12 @@ import { useSelector } from "react-redux";
 
 import s from "./Cart.module.css"
 
-import {CartItem} from "../index";
+import { CartItem } from "../index";
+import { sumBy } from "../../utils/common";
 
 
 const Cart = () => {
   const cart = useSelector((state) => state.counter.cart)
- 
 
   return (
     <section>
@@ -15,18 +15,16 @@ const Cart = () => {
         {!cart.length ? (
           <div className={s.empty}>Корзина пустая</div>
         ) : (
-
           <div className={s.cart}>
             <div className={s.items}>
-              {cart.map(obj => (
-                <CartItem key={obj.id} {...obj} />
+              {cart.map(item => (
+                <CartItem key={item.id} {...item} />
               ))}
-              <div className={s.price}>
-                <p>Итого:</p>
-                <p> 12345 p</p>
-              </div>
             </div>
-
+            <div className={s.price}>
+              <p>Итого:</p>
+              <span>{sumBy(cart.map(({ quantity, price }) => quantity * price))} р</span>
+            </div>
             <div className={s.bottom}>
               <div className={s.type}>
                 <div>Доставка</div>
