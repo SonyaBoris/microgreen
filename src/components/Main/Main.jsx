@@ -5,7 +5,7 @@ import s from "./Main.module.css"
 
 import MISKA from "../../assets/миска2.png"
 import LISTS from "../../assets/листики.png"
-import CIRCLE from "../../assets/circle.png"
+
 
 const Main = () => {
   const h1Variants = {
@@ -32,23 +32,49 @@ const Main = () => {
   return (
     <div className="container">
       <section className={s.main}>
+        <div className={s.back}>
+          <motion.h1 className={s.title}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              delay: .8,
+            }}
+            variants={h1Variants}
+          >микро</motion.h1>
+          <motion.h2 className={s.desc}
+            initial={"hidden"}
+            animate={"visible"}
+            transition={{
+              delay: 1,
+            }}
+            variants={h2Variants}
+          >зелень</motion.h2>
 
-        <motion.h1 className={s.title}
-          initial={"hidden"}
-          animate={"visible"}
-          transition={{
-            delay: .8,
-          }}
-          variants={h1Variants}
-        >микро</motion.h1>
-        <motion.h2 className={s.desc}
-          initial={"hidden"}
-          animate={"visible"}
-          transition={{
-            delay: 1,
-          }}
-          variants={h2Variants}
-        >зелень</motion.h2>
+          <motion.p className={s.text}
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1.5,
+            }}
+          >Маленькое ростки с огромной пользой. Сделайте каждый прием пищи богатым на витамины и микроэлементы</motion.p>
+          <Link to="/assortiment">
+            <motion.button
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                delay: 1.8,
+              }}>Купить</motion.button>
+          </Link>
+        </div>
+
         <motion.img className={s.lists} src={LISTS} alt=""
           initial={{
             y: 200,
@@ -81,50 +107,6 @@ const Main = () => {
             duration: 2,
           }}
         />
-        <motion.p className={s.text}
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            delay: 1.5,
-          }}
-        >Маленькое ростки с огромной пользой. Сделайте каждый прием пищи богатым на витамины и микроэлементы</motion.p>
-        <Link to="/about">
-          <motion.button
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              delay: 1.8,
-            }}>Купить</motion.button>
-        </Link>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{   
-            opacity: 1,
-          }}
-          transition={{
-          delay: .5,
-
-          }}>
-          <motion.img className={s.circle} src={CIRCLE} alt=""
-            animate={{
-              rotate: -360,
-            }}
-            transition={{
-              ease: 'linear',
-              duration: 4,
-              repeat: Infinity,
-            }} />
-        </motion.div>
       </section>
     </div >
 

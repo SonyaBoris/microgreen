@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom"
 
-import { Main, About, Assortiment, Cart, Contacts, Delivery, Grow, Layout } from "./components/index"
+import { Assortiment, Cart, Contacts, Delivery, Grow, Layout } from "./components/index"
+import Home from "./page/Home"
+
 
 
 function App() {
@@ -10,8 +12,7 @@ function App() {
     <div className="app">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Main />} />
-          <Route path="about" element={<About />} />
+          <Route index element={<Home />} />
           <Route path="assortiment" element={<Assortiment />} />
           <Route path="cart" element={<Cart />} />
           <Route path="contacts" element={<Contacts />} />

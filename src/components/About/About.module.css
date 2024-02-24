@@ -1,27 +1,33 @@
+.title{
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 100px;
+}
+.images{
+  display: flex;
+  justify-content: space-between;
+}
+.image{
+  border-radius: 30px;
+  width: 17vw;
+  transition: all .3s ;
+}
+.image:hover{
+  transform: scale(1.1);
+}
 .block{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
 }
-.text{ 
-  height: 60vh;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  gap: 40px;
-  text-align: center;
-  width: 400px;
-  color: #476042;
-}
+.text{
+  padding: 45px 20px;
 
-.image{
-  position: absolute;
-  width: 30vw;
-  z-index: 2;
+  border-radius: 30px;
+  width: 100%;
 }
-.image2{
-  position: absolute;
-  width: 30vw;
-  right: 0;
-  z-index: 2;
+.text:nth-child(2){
+  background-color: #FFB800;
+  border-color: transparent;
 }
