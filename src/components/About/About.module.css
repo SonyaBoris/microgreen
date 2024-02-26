@@ -1,17 +1,37 @@
-.title{
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 100px;
+.section{
+  position: relative;
+  overflow: hidden;
+
 }
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  width: 37vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3vw;
+}
+
 .images{
   display: flex;
   justify-content: space-between;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .image{
   border-radius: 30px;
-  width: 17vw;
-  transition: all .3s ;
+  width: 18vw;
+}
+.imageTop{
+  border-radius: 30px;
+  width: 37vw;
+  height: 250px;
+  object-fit: cover;
 }
 
 .block{

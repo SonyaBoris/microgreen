@@ -72,6 +72,7 @@ const Main = () => {
             duration: 2,
           }}
         />
+        
       </motion.section>
 
   );
