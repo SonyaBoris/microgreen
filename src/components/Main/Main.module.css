@@ -4,12 +4,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.back{
-  padding: 20px;
-  border-radius: 30px;
-  background-color: #DBDAD6;
-  width: 50vw;
-}
+
 .title{
   font-size: 200px;
   font-weight: 900;

@@ -31,6 +31,9 @@ h2{
   font-weight: 900;
   
 }
+section{
+  margin: 100px 0;
+}
 .container{
   margin: 0 auto;
   padding: 20px 30px;
@@ -51,4 +54,23 @@ h2{
  color: #fff;
  background-color: #000;
  border-radius: 30px;
+}
+.slide-in{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+.slide-out{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top;
+
 }

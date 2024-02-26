@@ -2,7 +2,7 @@ import { About, Main } from "../components";
 
 const Home = () => {
   return ( 
-    <div>
+    <div className="container">
       <Main />
       <About />
     </div>
