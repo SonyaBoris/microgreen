@@ -1,7 +1,34 @@
 .section{
   position: relative;
   overflow: hidden;
-
+}
+.ticker{ 
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  border-top: 1px solid #000;
+}
+.tickerWrapper{
+  display: flex;
+  border-bottom: 1px solid #000;
+}
+.tickerItem{
+  font-size: 2vw;
+  font-weight: 400;
+  text-transform: uppercase; 
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 50px;
+  animation: ticker 10s linear infinite;
+}
+@keyframes ticker {
+  0%{
+    transform: translateZ(0)
+  }
+  to{
+    transform: translate3d(-100%, 0,0)
+  }
+  
 }
 .top{
   display: flex;
@@ -37,16 +64,64 @@
 .block{
   display: flex;
   justify-content: space-between;
-  gap: 30px;
   margin-top: 30px;
 }
 .text{
-  padding: 45px 20px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 45px 20px; 
+  border:1px solid #000;
   border-radius: 30px;
-  width: 100%;
+  width: 55vw;
 }
-.text:nth-child(2){
-  background-color: #FFB800;
-  border-color: transparent;
+
+.hand{
+  position: relative;
+}
+.handImg{
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.handSvg{
+  width: 90%;
+  position: absolute;
+  left: 0px;
+  top:0px;
+  z-index: 0;
+}
+.vitamin,.vitamin2,.vitamin3{
+  position: absolute;
+  left: 180px;
+  top: 120px;
+  padding: 10px;
+  border-radius: 100%;
+  /* border: 1px solid #000; */
+  background-color: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 20px;
+  z-index: 3;
+}
+.vitamin2{
+  left: 347px;
+  top: 57px;
+}
+.circle{
+  position: absolute;
+  left: 200px;
+  top: 355px;
+  z-index: 3;
+}
+.circle2{
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+.circle3{
+  position: absolute;
+  left: 30px;
+  top: 40px;
 }

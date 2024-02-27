@@ -1,7 +1,15 @@
-.footer{
- 
+.footer{ 
   height: 143px;
-  color: #fff;
+ background: #000;
+}
+.block{
+  display: flex;
+}
+.info{
+  width: 200px;
+}
+.item{
+   color: #fff;
 }
 .social{
   width: 100%;

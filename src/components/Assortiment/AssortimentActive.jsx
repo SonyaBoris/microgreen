@@ -7,6 +7,7 @@ const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins }) 
 
   const dispatch = useDispatch()
   
+  
   return (
     <div className={s.about}>
       <img src={image} width={500} />

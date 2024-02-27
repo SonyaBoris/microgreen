@@ -5,6 +5,7 @@
   justify-content: center;
 }
 .about{
+  margin-bottom: 60px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -13,6 +14,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 50px 20px;
+  border: 1px solid #000;
+  border-radius: 30px;
 }
 .text{
   display: flex;
@@ -24,4 +28,8 @@
 }
 .description{
   width: 70%;
+}
+.imageChange{
+  width: 100px;
+  height: 100px;
 }
