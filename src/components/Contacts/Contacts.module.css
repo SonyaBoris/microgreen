@@ -1,0 +1,41 @@
+.contacts{
+  height: 75vh;
+}
+.title{
+margin-bottom: 20px;
+}
+.content{
+  display: flex;
+  gap: 20px;
+    font-size: 20px;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact{
+  padding: 15px 30px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+border: 1px solid #000;
+border-radius: 30px;
+}
+.adress{
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: #FFB800;
+
+}
+.map{
+  width: 660px;
+  height: 400px;
+  border-radius: 30px;
+}
+.social{
+  margin-bottom: 20px;
+}
+.icon{
+  padding-right: 10px;
+}

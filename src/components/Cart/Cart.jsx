@@ -17,17 +17,17 @@ const Cart = () => {
         ) : (
           <div className={s.cart}>
             <div className={s.content}>
-               <div className={s.items}>
-              {cart.map(item => (
-                <CartItem key={item.id} {...item} />
-              ))}
+              <div className={s.items}>
+                {cart.map(item => (
+                  <CartItem key={item.id} {...item} />
+                ))}
+              </div>
+              <div className={s.price}>
+                <p>Итого:</p>
+                <span>{sumBy(cart.map(({ quantity, price }) => quantity * price))} р</span>
+              </div>
             </div>
-            <div className={s.price}>
-              <p>Итого:</p>
-              <span>{sumBy(cart.map(({ quantity, price }) => quantity * price))} р</span>
-            </div>
-            </div>
-           
+
             <div className={s.bottom}>
               <div className={s.type}>
                 <div>Доставка</div>
@@ -39,7 +39,21 @@ const Cart = () => {
                 <input className={s.input} type="text" placeholder="адресс" />
               </form>
               <button>Отправить заявку</button>
+              <div className={s.about}>
+                <div className={s.itemAbout}>
+                  <h4 className={s.itemAboutName}>Доставка</h4>
+                  <p>
+                    После отправки заявки с вами свяжутся для уточнения заказа. Доставка осуществляется сервисом ЯндексДоставка. Стоимость расчитывается исходя из цены сервиса до вашего адреса
+                  </p>
+                </div>
+                <div className={s.itemAbout}>
+                  <h4 className={s.itemAboutName}>Самовывоз</h4>
+                  <p>Вы можете сделать заказ, мы отложим выбранные вами позиции. Забрать вы сможете из нашего магазина в удобное вам время.</p>
+                  <button>Адрес</button>
+                </div>
+              </div>
             </div>
+
           </div>
         )
         }

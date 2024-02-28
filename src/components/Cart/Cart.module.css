@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 40vw;
+  height: 70vh;
   gap: 20px;
 }
 .items{
@@ -79,6 +79,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+  margin-right: 20px;
   border-radius: 30px;
   font-size: 20px;
   background-color: #FFB800;
@@ -90,7 +91,7 @@
   font-size: 20px;
 }
 .bottom{
-  width:30%;
+  width:50%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -106,6 +107,7 @@
   cursor: pointer;
 }
 .form{
+  width: 60%;
   display: flex; 
   flex-direction: column;
   gap: 20px;
@@ -116,4 +118,19 @@
   border-radius: 30px;
   border: 1px solid #000;
  
+}
+.about{
+  display: flex;
+  gap: 20px;
+}
+.itemAbout{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: #FFB800;
+  border-radius: 30px;  
+}
+.itemAboutName{
+  font-size: 20px;
 }

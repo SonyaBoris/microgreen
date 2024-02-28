@@ -1,31 +1,62 @@
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../../redux/greenSlice"
+import { motion } from "framer-motion"
 
 import s from "./Assortiment.module.css"
 
 const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins, photos }) => {
 
   const dispatch = useDispatch()
-
+  const featureAnimate = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: custom => (
+      {
+        y: 0,
+        opacity: 1,
+        transition: { delay: custom * 1 }
+      }
+    )
+  }
+  const bgAnimate = {
+    hidden: {
+      x: -200,
+      opacity: 0
+    },
+    visible: custom => (
+      {
+        x: 0,
+        opacity: 1,
+        transition: { delay: custom * 1 }
+      }
+    )
+  }
 
   return (
     <div className={s.about}>
       <div className={s.left}>
-        <div className={s.top}>
-          <img src={image} width={300} />
+        <motion.div variants={bgAnimate} custom={.2}
+        initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} 
+         className={s.top}>
+          <img className={s.image} src={image} />
           <div className={s.titleContainer}>
             <h1 className={s.title}>
-             Микро зелень гороха 
-            </h1>            
-            </div>
-        </div>
-        <div className={s.photos}>
-          <div className={s.current} style={{ backgroundImage: `url(${photos[0]})` }} />
-          <div className={s.current} style={{ backgroundImage: `url(${photos[1]})` }} />
-          <div className={s.current} style={{ backgroundImage: `url(${photos[2]})` }} />
-        </div>
+              Микро зелень {name}
+            </h1>
+          </div>
+        </motion.div>
+        <motion.div className={s.photos}
+        initial="hidden" whileInView="visible" custom={.8} viewport={{ amount: .5 }} variants={featureAnimate}>
+          {photos.map((img, index) => (
+            <div className={s.current} key={index} style={{ backgroundImage: `url(${img})` }} />
+          ))
+          }
+        </motion.div>
       </div>
-      <div className={s.info}>
+      <motion.div className={s.info}
+       initial="hidden" whileInView="visible" custom={.5} viewport={{ amount: .5 }} variants={featureAnimate}>
         <h2>{name}</h2>
         <div className={s.text}>
           <p className={s.properties}>Вкус:</p>
@@ -44,7 +75,7 @@ const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins, ph
           <p className={s.description}>{price} p</p>
         </div>
         <button onClick={() => dispatch(addItemToCart({ id, name, image, price }))}>Добавить в корзину</button>
-      </div>
+      </motion.div>
     </div>
   );
 }

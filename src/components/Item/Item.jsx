@@ -7,6 +7,14 @@ const Item = ({ name, image, id, price }) => {
 
   const dispatch = useDispatch()
 
+  const handleClick = () =>{
+    dispatch(activeItem({ id }))
+    window.scrollTo({
+      top: 0,
+      left: 0
+    });
+  }
+
   return (
     <div className={s.item}>
       <img className={s.image} src={image} />
@@ -15,7 +23,7 @@ const Item = ({ name, image, id, price }) => {
         <h4 className={s.name}>{name}</h4>
         <p className={s.price}>{price} р</p>
         <div className={s.buttons}>
-          <div className={s.buy} onClick={() => dispatch(activeItem({ id }))}>
+          <div className={s.buy} onClick={() => handleClick()}>
             Инфо
           </div>
           <div className={s.buy} onClick={() => dispatch(addItemToCart({ id, name, image, price }))}>
