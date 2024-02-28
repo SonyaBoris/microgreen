@@ -16,7 +16,8 @@ const Cart = () => {
           <div className={s.empty}>Корзина пустая</div>
         ) : (
           <div className={s.cart}>
-            <div className={s.items}>
+            <div className={s.content}>
+               <div className={s.items}>
               {cart.map(item => (
                 <CartItem key={item.id} {...item} />
               ))}
@@ -25,6 +26,8 @@ const Cart = () => {
               <p>Итого:</p>
               <span>{sumBy(cart.map(({ quantity, price }) => quantity * price))} р</span>
             </div>
+            </div>
+           
             <div className={s.bottom}>
               <div className={s.type}>
                 <div>Доставка</div>
@@ -34,17 +37,13 @@ const Cart = () => {
                 <input className={s.input} type="text" placeholder="имя" />
                 <input className={s.input} type="text" placeholder="тел" />
                 <input className={s.input} type="text" placeholder="адресс" />
-
               </form>
               <button>Отправить заявку</button>
-
             </div>
           </div>
         )
         }
-
       </div>
-
     </section>
   );
 }

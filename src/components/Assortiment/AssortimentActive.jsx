@@ -3,14 +3,28 @@ import { addItemToCart } from "../../redux/greenSlice"
 
 import s from "./Assortiment.module.css"
 
-const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins }) => {
+const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins, photos }) => {
 
   const dispatch = useDispatch()
-  
-  
+
+
   return (
     <div className={s.about}>
-      <img src={image} width={500} />
+      <div className={s.left}>
+        <div className={s.top}>
+          <img src={image} width={300} />
+          <div className={s.titleContainer}>
+            <h1 className={s.title}>
+             Микро зелень гороха 
+            </h1>            
+            </div>
+        </div>
+        <div className={s.photos}>
+          <div className={s.current} style={{ backgroundImage: `url(${photos[0]})` }} />
+          <div className={s.current} style={{ backgroundImage: `url(${photos[1]})` }} />
+          <div className={s.current} style={{ backgroundImage: `url(${photos[2]})` }} />
+        </div>
+      </div>
       <div className={s.info}>
         <h2>{name}</h2>
         <div className={s.text}>
@@ -31,7 +45,6 @@ const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins }) 
         </div>
         <button onClick={() => dispatch(addItemToCart({ id, name, image, price }))}>Добавить в корзину</button>
       </div>
-
     </div>
   );
 }

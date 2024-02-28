@@ -10,10 +10,29 @@
   align-items: center;
   gap: 20px;
 }
+.top{
+display: flex;
+align-items: center;
+}
+.titleContainer{
+  text-align: center;
+  padding: 30px 15px;
+  background-color: #000;
+  border-radius: 30px;
+  height: 260px;
+  width: 340px;
+}
+.title{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 900;
+}
 .info{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 20px;
+  height: 554px;
   padding: 50px 20px;
   border: 1px solid #000;
   border-radius: 30px;
@@ -29,7 +48,13 @@
 .description{
   width: 70%;
 }
-.imageChange{
-  width: 100px;
-  height: 100px;
+.photos{
+  display: flex;
+  gap: 20px;
+}
+.current{
+  width: 200px;
+  height: 250px;
+  border-radius: 30px;
+  background-size: cover;
 }
