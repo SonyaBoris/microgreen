@@ -4,8 +4,6 @@ export { default as Assortiment } from "./Assortiment/Assortiment";
 export { default as Cart } from "./Cart/Cart";
 export { default as CartItem } from "./Cart/CartItem";
 export { default as Contacts } from "./Contacts/Contacts";
-export { default as Delivery } from "./Delivery/Delivery";
-export { default as Grow } from "./Grow/Grow";
 export { default as Layout } from "./Layout";
 export { default as Footer } from "./Footer/Footer";
 export { default as Item } from "./Item/Item";

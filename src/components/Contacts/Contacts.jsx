@@ -10,9 +10,9 @@ const Contacts = () => {
             <div className={s.left}>
               <p className={s.adress}>Мы находимся по адресу Солнечная 60,<br/> 1 этаж напротив входа в перекресток</p>
               <div className={s.contact}>
-                <p>Связаться с нами можно по номеру телефона
+                <p>Связаться с нами можно по номеру телефона <br/>
                   <a href="tel:+79171060405"> +7 917 106 04 05</a>
-                  . Мы доступны во всех мессенджерах</p>
+                  <br/>Мы доступны во всех мессенджерах</p>
                 <div className={s.social}>
                   <h4>Следите за нашими новостями в соц сетях</h4>
                   <a className={s.icon} href="https://www.instagram.com/mikrozelen.ot.vasilia">

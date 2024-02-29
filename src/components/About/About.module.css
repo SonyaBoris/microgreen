@@ -5,7 +5,7 @@
 .ticker{ 
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   border-top: 1px solid #000;
 }
 .tickerWrapper{
@@ -72,6 +72,7 @@
   justify-content: center;
   gap: 30px;
   padding: 45px 20px; 
+  margin-left: 20px;
   border:1px solid #000;
   border-radius: 30px;
   width: 55vw;
@@ -92,36 +93,57 @@
   top:0px;
   z-index: 0;
 }
-.vitamin,.vitamin2,.vitamin3{
-  position: absolute;
-  left: 180px;
-  top: 120px;
-  padding: 10px;
-  border-radius: 100%;
-  /* border: 1px solid #000; */
-  background-color: #000;
-  color: #fff;
-  font-weight: 900;
-  font-size: 20px;
-  z-index: 3;
-}
-.vitamin2{
-  left: 347px;
-  top: 57px;
-}
 .circle{
+  width: 30%;
   position: absolute;
   left: 200px;
-  top: 355px;
+  top: 40%;
   z-index: 3;
 }
 .circle2{
+  width: 30%;
   position: absolute;
   right: 10px;
-  bottom: 0;
+  top: 65%;
 }
 .circle3{
+  width: 15%;
   position: absolute;
   left: 30px;
   top: 40px;
+}
+@media (max-width: 1220px){
+  .imageTop{
+    width: 45vw;
+  }
+  .image{
+    width: 20vw;
+  }
+}
+
+@media (max-width: 800px){
+  .tickerItem{
+font-size: 4vw;
+  }
+  .top{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .imageTop,
+  .title{
+  width: 100%;
+  }
+  .images{
+    margin: 10px 0;
+  }
+  .image{
+    width: 19vw;
+  }
+  .hand{
+    display: none;
+  }
+  .text{
+    width: 100%;
+    margin-left: 0;
+  }
 }

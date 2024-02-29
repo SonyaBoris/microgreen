@@ -8,7 +8,7 @@
   border: 1px solid #000;
   border-radius: 30px;
   display: flex;
-  gap: 3vw;
+
 }
 .item{
   padding: 15px 30px;
@@ -31,4 +31,10 @@
   font-weight: 800;
   border-radius: 100%;
 
+}
+@media (max-width: 800px){
+  .logo{
+    width: 50px;
+  }
+  .navigation{display: none;}
 }

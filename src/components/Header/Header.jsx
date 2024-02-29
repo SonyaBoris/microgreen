@@ -13,19 +13,13 @@ const Header = () => {
       <header className={s.header} >
 
         <Link to="/">
-          <img src={LOGO} />
+          <img className={s.logo} src={LOGO} />
         </Link>
         <nav>
           <ul className={s.navigation}>
             <li>
               <NavLink className={s.item} to="/assortiment">Ассортимент</NavLink>
-            </li>
-            <li>
-              <NavLink className={s.item} to="/grow">Вырасти сам</NavLink>
-            </li>
-            <li>
-              <NavLink className={s.item} to="/delivery">Доставка</NavLink>
-            </li>
+            </li>           
             <li>
               <NavLink className={s.item} to="/contacts">Контакты</NavLink>
             </li>

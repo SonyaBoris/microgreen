@@ -56,7 +56,7 @@ const AssortimentActive = ({ image, info, price, id, name, benefit, vitamins, ph
         </motion.div>
       </div>
       <motion.div className={s.info}
-       initial="hidden" whileInView="visible" custom={.5} viewport={{ amount: .5 }} variants={featureAnimate}>
+       initial="hidden" whileInView="visible" custom={.5}  variants={featureAnimate}>
         <h2>{name}</h2>
         <div className={s.text}>
           <p className={s.properties}>Вкус:</p>

@@ -1,5 +1,5 @@
 .main{
-  margin: 100px 0;
+  margin: 10vh 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,36 +7,35 @@
 }
 
 .title{
-  font-size: 200px;
+  font-size: 10vw;
   font-weight: 900;
   text-transform: uppercase;
   color: #000;
   line-height: 80%;
 }
 .desc{
-  font-size: 120px;
+  font-size: 5vw;
   font-weight: 900;
   text-transform: uppercase;
 }
 .text{
-  width: 500px;
+  width: 30vw;
   margin: 20px 0;
-  font-size: 18px;
   font-weight: 500;
 }
 
 .lists{
   position: absolute;
-  top: -150px;
-  right: 80px;
-  width: 500px;
+  top: -30%;
+  right: 10%;
+  width: 30vw;
   z-index: 1;
 }
 .miska{
   position: absolute;
   top: 0;
   right: 0;
-  width: 500px;
+  width: 30vw;
   transform: rotate(-30deg);
   z-index: 0;
 }
@@ -44,4 +43,52 @@
   position: absolute;
   top: 140px;
   left: 645px;
+}
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 200px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  margin: 20px 0 40px;
+  font-size: 20px;
+}
+
+@media (max-width: 1220px){
+  .miska{
+    top: 35px;
+  }
+  .lists{
+    position: absolute;
+    top: -20px;
+    right: 10%;
+    width: 30vw;
+    z-index: 1;
+  }
+  .text{
+    width: 45vw;
+  }
+}
+
+@media (max-width: 800px){
+  .main{
+    margin: 0;
+  }
+  .miska{
+    display: none;
+  }
+  .lists{
+    top: -15vw;
+    left: 0;
+  }
+  .text{
+    width: 100%;
+  }
+}
+@media (max-width: 450px){
+  .title{
+    font-size: 15vw;
+  }
 }
