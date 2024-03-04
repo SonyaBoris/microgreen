@@ -1,21 +1,9 @@
-import { Link } from "react-router-dom";
 import s from "./Footer.module.css"
 
 const Footer = () => {
   return (
     <footer className={s.footer}>
       <div className="container">
-        <div className={s.block}>
-           <div className={s.info}>
-          <li>
-            <Link className={s.item} to="/contacts">Адресс магазина</Link>
-          </li><li>
-            <Link className={s.item} to="/assortiment">Ассортимент</Link>
-          </li>
-          <li>
-            <Link className={s.item} to="/delivery">Главная</Link>
-          </li>
-        </div>
         <div className={s.social}>
           <a className={s.icon} href="https://www.instagram.com/mikrozelen.ot.vasilia">
             <svg width="42" height="42" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,8 +22,6 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        </div>
-       
       </div>
     </footer>
   );

@@ -7,7 +7,7 @@ const Item = ({ name, image, id, price }) => {
 
   const dispatch = useDispatch()
 
-  const handleClick = () =>{
+  const handleClick = () => {
     dispatch(activeItem({ id }))
     window.scrollTo({
       top: 0,
@@ -30,9 +30,7 @@ const Item = ({ name, image, id, price }) => {
             Купить
           </div>
         </div>
-
       </div>
-
     </div>
   );
 }

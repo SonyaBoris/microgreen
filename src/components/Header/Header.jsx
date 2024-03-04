@@ -11,7 +11,6 @@ const Header = () => {
   return (
     <div className="container">
       <header className={s.header} >
-
         <Link to="/">
           <img className={s.logo} src={LOGO} />
         </Link>

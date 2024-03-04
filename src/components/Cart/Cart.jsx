@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 
 const Cart = () => {
+  
   const cart = useSelector((state) => state.counter.cart)
 
   return (
@@ -28,7 +29,6 @@ const Cart = () => {
                 <span>{sumBy(cart.map(({ quantity, price }) => quantity * price))} р</span>
               </div>
             </div>
-
             <div className={s.bottom}>
               <div className={s.type}>
                 <div>Доставка</div>
@@ -56,7 +56,6 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-
           </div>
         )
         }

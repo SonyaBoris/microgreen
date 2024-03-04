@@ -1,18 +1,10 @@
 .footer{ 
-  height: 143px;
  background: #000;
 }
-.block{
-  display: flex;
-}
-.info{
-  width: 200px;
-}
-.item{
-   color: #fff;
-}
+
 .social{
   width: 100%;
+  height: 100%;
    display: flex;
    justify-content: flex-end;
    align-items: center;
