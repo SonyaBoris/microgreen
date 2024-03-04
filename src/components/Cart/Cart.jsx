@@ -4,6 +4,7 @@ import s from "./Cart.module.css"
 
 import { CartItem } from "../index";
 import { sumBy } from "../../utils/common";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
@@ -49,7 +50,9 @@ const Cart = () => {
                 <div className={s.itemAbout}>
                   <h4 className={s.itemAboutName}>Самовывоз</h4>
                   <p>Вы можете сделать заказ, мы отложим выбранные вами позиции. Забрать вы сможете из нашего магазина в удобное вам время.</p>
-                  <button>Адрес</button>
+                  <Link to="/contacts">
+                    <button className={s.btn}>Адресс</button>
+                  </Link>
                 </div>
               </div>
             </div>

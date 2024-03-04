@@ -134,3 +134,42 @@
 .itemAboutName{
   font-size: 20px;
 }
+.btn{
+  background-color: #000;
+  color: #fff;
+}
+.btn:hover{
+  color: #000;
+}
+
+@media(max-width:1000px){
+.cart{
+  flex-direction: column;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  }
+  .bottom {
+    width: 100%;
+  }
+}
+@media(max-width:600px){
+.about{
+  flex-direction: column;
+}
+.items{
+  padding-right: 0;
+}
+.item{
+  padding: 5px;
+  gap: 0;
+}
+.sum{
+  bottom: 5px;
+  right: 20px;
+}
+.price{
+  margin: 0;
+}
+}

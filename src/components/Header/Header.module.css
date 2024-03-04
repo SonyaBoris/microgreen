@@ -36,5 +36,16 @@
   .logo{
     width: 50px;
   }
-  .navigation{display: none;}
+  .navigation{
+    font-size: 16px;
+    padding: 0;
+    border: none;
+  }
+  .item{
+    padding: 5px;
+  }
+  .cart{
+    padding-left: 0;
+  }
+
 }
