@@ -5,18 +5,26 @@ import s from "./Cart.module.css"
 import { CartItem } from "../index";
 import { sumBy } from "../../utils/common";
 import { Link } from "react-router-dom";
+import { sendMessage } from "../../API/tg";
 
 
 const Cart = () => {
-  
+  const handleSubmit = async ({
+    name,
+    tel
+  }) => {
+    const message = `Имя: ${name} Телефон: ${tel}`
+    await sendMessage(message)
+  }
+
   const cart = useSelector((state) => state.counter.cart)
 
   return (
     <section>
       <div className="container">
-        {!cart.length ? (
+        {/* {!cart.length ? (
           <div className={s.empty}>Корзина пустая</div>
-        ) : (
+        ) : ( */}
           <div className={s.cart}>
             <div className={s.content}>
               <div className={s.items}>
@@ -34,12 +42,11 @@ const Cart = () => {
                 <div>Доставка</div>
                 <div>Самовывоз</div>
               </div>
-              <form className={s.form} action="">
+              <form onSubmit={handleSubmit} className={s.form} action="">
                 <input className={s.input} type="text" placeholder="имя" />
                 <input className={s.input} type="text" placeholder="тел" />
-                <input className={s.input} type="text" placeholder="адресс" />
+                <button type="submit">Отправить заявку</button>
               </form>
-              <button>Отправить заявку</button>
               <div className={s.about}>
                 <div className={s.itemAbout}>
                   <h4 className={s.itemAboutName}>Доставка</h4>
@@ -57,8 +64,8 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        )
-        }
+        {/* )
+        } */}
       </div>
     </section>
   );
