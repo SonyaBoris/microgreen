@@ -106,17 +106,27 @@
   gap: 20px;
   cursor: pointer;
 }
-.form{
-  width: 60%;
+.form{  
   display: flex; 
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+}
+.checkeds{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.radio{
+  margin-right:  10px;
+  accent-color: #FFB800;
 }
 .input{ 
   padding: 10px;
   background-color: transparent;
   border-radius: 30px;
   border: 1px solid #000;
+  width: 100%;
  
 }
 .about{
@@ -141,6 +151,7 @@
 .btn:hover{
   color: #000;
 }
+
 
 @media(max-width:1000px){
 .cart{
@@ -171,5 +182,8 @@
 }
 .price{
   margin: 0;
+}
+.form{
+  width: 80vw;
 }
 }

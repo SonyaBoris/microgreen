@@ -60,16 +60,43 @@ svg {
  background-color: #000;
  border-radius: 30px;
 }
+.modal{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+.modal.visible{
+  transform: scale(1);
+}
+.modalContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
 @media (max-width: 1220px) {
   .container{
     width:90vw; 
-  }
-  
+  }  
 }
 @media (max-width: 800px) {
   .container{
     width:97vw; 
 padding: 20px 10px;
+  }
+  .modalContent{
+    width: 60vw;
   }
   
 }
