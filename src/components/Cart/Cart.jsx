@@ -25,9 +25,10 @@ const Cart = () => {
     setInputTel(e.target.value)
   }
   const cartMap = (cart.map(item => `${item.name}: (${item.quantity} шт)`)).join(" ")
+  const result = sumBy(cart.map(({ quantity, price }) => quantity * price))
 
-  const handleSubmit = ({ inputTel, inputName, cartMap, checked }) => {
-    const message = `Имя: ${inputName}. Телефон: ${inputTel}. Заказ: ${cartMap} Тип: ${checked}`
+  const handleSubmit = ({ inputTel, inputName, cartMap, checked, result }) => {
+    const message = `Имя: ${inputName}. Телефон: ${inputTel}. Заказ: ${cartMap} Тип: ${checked} Итого: ${result}`
     // console.log(message)
     sendMessage(message)
   }
@@ -45,11 +46,11 @@ const Cart = () => {
             </div>
             <div className={s.price}>
               <p>Итого:</p>
-              <span>{sumBy(cart.map(({ quantity, price }) => quantity * price))} р</span>
+              <span>{result} р</span>
             </div>
           </div>
           <div className={s.bottom}>
-            <form onSubmit={() => handleSubmit({ inputName, inputTel, cartMap, checked })} className={s.form} action="">
+            <form onSubmit={() => handleSubmit({ inputName, inputTel, cartMap, checked, result })} className={s.form} action="">
 
               <div className={s.checkeds}>
                 <div>
