@@ -29,21 +29,9 @@ const About = () => {
       }
     )
   }
-  const bgAnimate = {
-    hidden: {
-      x: 100,
-      opacity: 0
-    },
-    visible: custom => (
-      {
-        x: 0,
-        opacity: 1,
-        transition: { delay: custom * 1 }
-      }
-    )
-  }
+ 
   return (
-    <section id="part1" className={s.section}>
+    <section className={s.section}>
       <motion.div  className={s.ticker} initial="hidden" whileInView="visible" viewport={{ amount: .5 }} variants={featureAnimate}>
         <div className={s.tickerWrapper}>
           <p className={s.tickerItem}>эстетично, вкусно и полезно</p>
