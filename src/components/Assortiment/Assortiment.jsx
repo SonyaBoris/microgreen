@@ -8,12 +8,12 @@ const green = [
   {
     "id": 0,
     "name": "Горох",
-    "image": "./../src/assets/goroh.png",
+    "image": "./assets/goroh.png",
     "price": 150,
     "info": "Cвежего гороха",
     "vitamins": "Витамины А, С, D, группа В, биотин, кальций, фосфор, йод, железо, белок, аминокислоты",
     "benefit" : "Профилактика ожирения, анемии, авитаминоза, сахарного диабета",
-    "photos" : [`../src/assets/handGoroh.jpg`,`../src/assets/photo6.jpg`, `../src/assets/photo7.jpg`]
+    "photos" : [`./assets/handGoroh.jpg`,`./assets/photo6.jpg`, `./assets/photo7.jpg`]
   },
   {
     "id": 1,
