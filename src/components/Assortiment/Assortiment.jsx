@@ -8,7 +8,7 @@ const green = [
   {
     "id": 0,
     "name": "Горох",
-    "image": "../src/assets/goroh.png",
+    "image": "./../src/assets/goroh.png",
     "price": 150,
     "info": "Cвежего гороха",
     "vitamins": "Витамины А, С, D, группа В, биотин, кальций, фосфор, йод, железо, белок, аминокислоты",
