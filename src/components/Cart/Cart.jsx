@@ -31,6 +31,7 @@ const Cart = () => {
     const message = `Имя: ${inputName}. Телефон: ${inputTel}. Заказ: ${cartMap} Тип: ${checked} Итого: ${result}`
     // console.log(message)
     sendMessage(message)
+    setModal(true)
   }
   console.log(inputName, inputTel, cartMap, checked);
 
@@ -64,7 +65,7 @@ const Cart = () => {
               </div>
               <input onChange={nameChangeHandler} className={s.input} type="text" placeholder="имя" />
               <input onChange={telChangeHandler} className={s.input} type="text" placeholder="телефон" />
-              <button onClick={() => setModal(true)} type="submit">Отправить заявку</button>
+              <button type="submit">Отправить заявку</button>
             </form>
             <div className={s.about}>
               <div className={s.itemAbout}>
