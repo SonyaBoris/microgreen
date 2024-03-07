@@ -27,11 +27,14 @@ const Cart = () => {
   const cartMap = (cart.map(item => `${item.name}: (${item.quantity} шт)`)).join(" ")
   const result = sumBy(cart.map(({ quantity, price }) => quantity * price))
 
-  const handleSubmit = ({ inputTel, inputName, cartMap, checked, result }) => {
-    const message = `Имя: ${inputName}. Телефон: ${inputTel}. Заказ: ${cartMap} Тип: ${checked} Итого: ${result}`
-    // console.log(message)
-    sendMessage(message)
-    setModal(true)
+  async function handleSubmit({ inputTel, inputName, cartMap, checked, result }) {
+    try {
+      let message = `Имя: ${inputName}. Телефон: ${inputTel}. Заказ: ${cartMap} Тип: ${checked} Итого: ${result}`
+      await sendMessage(message)
+      setModal(true)
+    } catch(err) {
+      console.log(err)
+    }
   }
   console.log(inputName, inputTel, cartMap, checked);
 
