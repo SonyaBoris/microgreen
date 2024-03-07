@@ -32,11 +32,10 @@ const Cart = () => {
       let message = `Имя: ${inputName}. Телефон: ${inputTel}. Заказ: ${cartMap} Тип: ${checked} Итого: ${result}`
       await sendMessage(message)
       setModal(true)
-    } catch(err) {
+    } catch (err) {
       console.log(err)
     }
   }
-  console.log(inputName, inputTel, cartMap, checked);
 
   return (
     <section>
@@ -54,7 +53,10 @@ const Cart = () => {
             </div>
           </div>
           <div className={s.bottom}>
-            <form onSubmit={() => handleSubmit({ inputName, inputTel, cartMap, checked, result })} className={s.form} action="">
+            <form onSubmit={(e) => {
+              e.preventDefault()
+              handleSubmit({ inputName, inputTel, cartMap, checked, result })
+            }} className={s.form} action="">
 
               <div className={s.checkeds}>
                 <div>
