@@ -32,7 +32,7 @@ const About = () => {
  
   return (
     <section className={s.section}>
-      <motion.div  className={s.ticker} initial="hidden" whileInView="visible" viewport={{ amount: .5 }} variants={featureAnimate}>
+      <div  className={s.ticker}>
         <div className={s.tickerWrapper}>
           <p className={s.tickerItem}>эстетично, вкусно и полезно</p>
           <p className={s.tickerItem}>эстетично, вкусно и полезно</p>
@@ -48,7 +48,7 @@ const About = () => {
           <p className={s.tickerItem}>настоящие витамины</p>
           <p className={s.tickerItem}>настоящие витамины</p>
         </div>
-      </motion.div>
+      </div>
       <motion.div className={s.top} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}
       >
         <motion.div
